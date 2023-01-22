@@ -1,43 +1,105 @@
-﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
-
-html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+﻿/* Resets and general styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1:focus {
-    outline: none;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+    overflow-x: hidden;
+    height: 100%;
 }
 
-a, .btn-link {
-    color: #0071c1;
+body {
+    position: relative;
+    min-height: 100vh;
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
 }
 
-.btn-primary {
+/* Navigation menu */
+header {
+    background: pink;
+    width: 100%;
+}
+
+.main-nav {
+    text-align: center;
+}
+
+    .main-nav > li {
+        list-style: none;
+        padding: 1rem;
+        text-transform: uppercase;
+    }
+
+.nav-link {
+    text-decoration: none;
     color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.logo-container {
+    display: block;
 }
 
-.content {
-    padding-top: 1.1rem;
+.logo {
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid #fff;
+    padding: 1rem;
 }
 
-.valid.modified:not([type=checkbox]) {
-    outline: 1px solid #26b050;
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main-nav {
+        display: flex;
+        margin-right: .5rem;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+        .main-nav li {
+            margin: 0;
+        }
+
+    .nav-link {
+        margin-left: .5rem;
+        font-size: 1.1rem;
+    }
+
+    .logo-container {
+        display: inline-block;
+    }
+
+    .logo {
+        margin-top: 0;
+        border-bottom: none;
+    }
 }
 
-.invalid {
-    outline: 1px solid red;
+
+/* Main content */
+main {
+    background: lightblue;
 }
 
-.validation-message {
-    color: red;
+.nav-link {
+    text-decoration: none;
+    color: #fff;
 }
 
+/* Loading bar and error UI */
 #blazor-error-ui {
     background: lightyellow;
     bottom: 0;
