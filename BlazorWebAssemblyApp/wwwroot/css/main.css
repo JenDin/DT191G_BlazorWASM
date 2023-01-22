@@ -55,7 +55,42 @@ header {
     padding: 1rem;
 }
 
+sup {
+    font-size: 1.25rem;
+    padding-left: .1rem;
+}
+
+/* Main content */
+main {
+    background: lightblue;
+}
+
+.main-section {
+    padding: 1rem;
+}
+
+.home-title {
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background: pink;
+    position: fixed;
+    bottom: 0;
+    padding: 1.2rem;
+    width: 100%;
+}
+
+    footer > p {
+        text-align: center;
+    }
+
+
+/* Media queries for larger screens */
 @media screen and (min-width: 768px) {
+    /* Navigation menu */
     .navbar {
         display: flex;
         justify-content: space-between;
@@ -86,18 +121,20 @@ header {
         margin-top: 0;
         border-bottom: none;
     }
+
+    /* Main content  */
+    .main-section {
+        background: salmon;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .home-title {
+        font-size: 2.5rem;
+    }
 }
 
 
-/* Main content */
-main {
-    background: lightblue;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #fff;
-}
 
 /* Loading bar and error UI */
 #blazor-error-ui {
@@ -161,4 +198,3 @@ main {
     .loading-progress-text:after {
         content: var(--blazor-load-percentage-text, "Loading");
     }
-
