@@ -44,15 +44,16 @@ header {
 
 .logo-container {
     display: block;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+    padding: 1rem;
 }
 
 .logo {
     color: #fff;
     font-size: 2rem;
-    text-align: center;
+    text-decoration: none;
     text-transform: uppercase;
-    border-bottom: 2px solid #fff;
-    padding: 1rem;
 }
 
 sup {
@@ -115,11 +116,11 @@ footer {
 
     .logo-container {
         display: inline-block;
+        border-bottom: none;
     }
 
     .logo {
         margin-top: 0;
-        border-bottom: none;
     }
 
     /* Main content  */
