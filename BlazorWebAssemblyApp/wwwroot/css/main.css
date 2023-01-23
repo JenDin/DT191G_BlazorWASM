@@ -21,6 +21,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.bold {
+    font-weight: 600;
+}
+
 /* Navigation menu */
 header {
     background: #562b88;
@@ -127,15 +131,17 @@ input[type=number] {
 
 /* JSON data page */
 .pokemon-container {
-/*    background: salmon;*/
     display: flex;
-    max-width: 420px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 600px;
     margin: 0 auto;
-    padding: 1rem;
 }
-    .pokemon-container > div {
-        width: 50%;
-    }
+.pokemon-card {
+    width: 33%;
+    padding: 2rem;
+}
 
 .pokemon-img {
     width: 100%;

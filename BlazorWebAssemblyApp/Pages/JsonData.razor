@@ -15,21 +15,17 @@ Du väljer själv om du vill läsa in en JSON-fil som finns i själva projektet,
 }
 else
 {
-    @foreach (var poke in pokedex.pokemon)
-    {
-
-        <div class="pokemon-container">
-            <div>
+    <div class="pokemon-container">
+        @foreach (var poke in pokedex.pokemon)
+        {
+            <div class="pokemon-card">
                 <h2 class="pokemon-name">@poke.name</h2>
-                <p class="pokemon-height">@poke.height</p>
-                <p class="pokemon-weight">@poke.weight</p>
-            </div>
-            <div>
+                <p class="pokemon-height"><span class="bold">Längd:</span> @poke.height</p>
+                <p class="pokemon-weight"><span class="bold">Vikt:</span> @poke.weight</p>
                 <img src="@poke.img" alt="image of a pokémon" class="pokemon-img" />
             </div>
-        </div>
-
-    }
+        }
+    </div>
 }
 
 @code {
