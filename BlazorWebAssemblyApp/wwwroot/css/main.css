@@ -43,24 +43,19 @@ header {
 }
 
 .logo-container {
-    display: block;
-    text-align: center;
     border-bottom: 2px solid #fff;
-    padding: 1rem;
 }
 
 .logo {
-    color: #fff;
-    font-size: 2rem;
-    font-weight: 600;
-    text-decoration: none;
-    text-transform: uppercase;
+    position: relative;
+    top: 1rem;
+    width: 350px;
+    display: flex;
+    justify-content: center;
 }
 
-sup {
-    font-size: 1.25rem;
-    font-weight: 400;
-    padding-left: .1rem;
+.active {
+    text-decoration: underline;
 }
 
 /* Main content */
@@ -70,7 +65,8 @@ sup {
 }
 
 .home-title,
-.convert-title {
+.convert-title,
+.data-title {
     font-size: 1.8rem;
     font-weight: 800;
     text-align: center;
@@ -130,6 +126,22 @@ input[type=number] {
 }
 
 /* JSON data page */
+.pokemon-container {
+/*    background: salmon;*/
+    display: flex;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+    .pokemon-container > div {
+        width: 50%;
+    }
+
+.pokemon-img {
+    width: 100%;
+    max-width: 100px;
+    margin: 0 auto;
+}
 
 /* Footer */
 footer {
@@ -178,6 +190,7 @@ footer {
 
     .logo {
         margin-top: 0;
+        margin-left: 1.5rem;
     }
 
     /* Main content  */
@@ -188,7 +201,8 @@ footer {
     }
 
     .home-title,
-    .convert-title {
+    .convert-title,
+    .data-title {
         font-size: 2.5rem;
     }
 
