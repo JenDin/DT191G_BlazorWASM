@@ -6,9 +6,6 @@
 
 <h1 class="data-title">Läsa in JSON-data</h1>
 
-<!-- JSON - undersida som använder HttpClient för att läsa in data i JSON-format och skriver ut det till skärmen på lämpligt sätt.
-Du väljer själv om du vill läsa in en JSON-fil som finns i själva projektet, eller läsa in något externt -  exempelvis en REST-webbtjänst. -->
-
 @if (pokedex == null)
 {
     <p>Laddar pokemon...</p>
@@ -30,9 +27,9 @@ else
 
 @code {
 
-    // Variabel av Pokedex-klassen
     Pokedex pokedex;
 
+    // Pokemon model 
     public class Pokemon
     {
         public string? name { get; set; }
@@ -41,7 +38,7 @@ else
         public string? img { get; set; }
     }
 
-    // Pokedex class
+    // Pokedex model
     public class Pokedex
     {
         public List<Pokemon> pokemon { get; set; }
